@@ -1,4 +1,8 @@
-<p>You changes have been successfully saved</p>
 
-<%= link_to "Continue", edit_article_path(@article, key: @article.hash_key) %>
+
+<div class="confirmation">
+  <p>You changes have been successfully saved</p>
+
+  <%= link_to "Continue", edit_article_path(@article, key: @article.hash_key) %>
+</div>
 

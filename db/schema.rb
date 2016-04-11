@@ -14,17 +14,15 @@
 ActiveRecord::Schema.define(version: 20160411164915) do
 
   create_table "articles", force: :cascade do |t|
-    t.string   "title",       null: false
+    t.string   "title",                     null: false
     t.text     "body"
-    t.string   "contact",     null: false
-    t.decimal  "price"
-    t.decimal  "count"
-    t.decimal  "0.0"
+    t.string   "contact",                   null: false
+    t.decimal  "price",       default: 0.0
     t.integer  "category_id"
     t.string   "location"
-    t.string   "hash_key",    null: false
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string   "hash_key",                  null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
   create_table "categories", force: :cascade do |t|
