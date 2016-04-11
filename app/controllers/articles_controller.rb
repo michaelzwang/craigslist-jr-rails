@@ -20,6 +20,18 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
 
+  def update
+    @article = Article.find(params[:id])
+    @article.update_attributes(article_params)
+    render "articles/update_confirmation"
+  end
+
+  def destroy
+    Article.find(params[:id]).destroy
+    render "articles/delete_confirmation"
+  end
+
+
  private
 
   def article_params

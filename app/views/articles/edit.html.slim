@@ -1,5 +1,9 @@
 h1 Edit Article
 
 = render 'form'
+= simple_form_for @article, url: article_path, method: :delete do |f|
+  = f.submit "Delete"
 
+p This is your custom url. Save it, as this is the only way to edit your post.
 = "#{edit_article_url}/?key=#{@article.hash_key}"
+
