@@ -1,0 +1,8 @@
+= simple_form_for @article do |f|
+  = f.input :title
+  = f.input :price, placeholder: '0.00'
+  = f.input :contact
+  = f.input :location
+  = f.association :category, prompt: "Select One"
+  = f.input :body
+  = f.submit "Post"
