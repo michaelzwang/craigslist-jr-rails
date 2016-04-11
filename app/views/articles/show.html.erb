@@ -1,8 +1,8 @@
 <h1><%= @article.title %></h1>
-<ul>
-  <li><%= @article.category.name %></li>
-  <li>$<%= @article.price %></li>
-  <li><%= @article.contact %></li>
-  <li><%= @article.location %></li>
+<ul class="article-details">
+  <li>Category: <%= @article.category.name %></li>
+  <li>Price: $<%= @article.price %></li>
+  <li>Contact: <%= @article.contact %></li>
+  <li>Location: <%= @article.location %></li>
   <li><%= @article.body %></li>
 </ul>
